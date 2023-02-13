@@ -24,7 +24,7 @@ namespace Esevice2._0.Controllers
         }
 
         [HttpGet]
-        [Route("search/{city}")]
+        [Route("search/city/{city}")]
         public async Task<ActionResult<IEnumerable<ServicemanReadDto>>> GetByCity(string city)
         {
             var servicemanList = await repo.FindByCity(city);
@@ -37,7 +37,7 @@ namespace Esevice2._0.Controllers
 
         }
         [HttpGet ]
-        [Route("search/{category}")]
+        [Route("search/category/{category}")]
       
         public async Task<ActionResult<IEnumerable<ServicemanReadDto>>> GetByCategory(string category)
         {
